@@ -6,14 +6,15 @@ function getRequire({
 	type,
 	filePath,
 	loaderContext,
+	query,
 }) {
-	return `require(${getRequireString(type, filePath, loaderContext)})`;
+	return `require(${getRequireString(type, filePath, loaderContext, query)})`;
 }
 
-function getRequireString(type, filePath, loaderContext) {
+function getRequireString(type, filePath, loaderContext, query) {
 	return loaderUtils.stringifyRequest(
 		loaderContext,
-		`!!${getLoaderString(type)}!${filterPath}?type=${type}!${filePath}`
+		`!!${getLoaderString(type, query)}!${filterPath}?type=${type}!${filePath}`
 	);
 }
 

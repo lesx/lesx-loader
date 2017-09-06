@@ -18,19 +18,19 @@ module.exports = function(content) {
     	var _lesx_component = ${getRequire({
     		type: 'js',
     		filePath,
-    		loaderContext
+			loaderContext,
+			query,
     	})};
 
     	module.exports = _lesx_component;
     `;
 
-	if (result.style) {
-		output += getRequire({
-			type: 'sass',
-			filePath,
-			loaderContext
-		});
-	}
+	output += getRequire({
+		type: 'sass',
+		filePath,
+		loaderContext,
+		query,
+	});
 
 	this.callback(null, output, null);
 };
