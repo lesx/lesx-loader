@@ -1,6 +1,6 @@
 {
   "name": "lesx-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "lesx DSL loader",
   "main": "./index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "author": "xiangzhong.wxz",
   "license": "MIT",
   "dependencies": {
-    "lesx-dsl-to-js": "^0.0.x",
+    "lesx-dsl-to-jsx": "^0.0.x",
     "loader-utils": "^1.1.0"
   },
   "devDependencies": {
