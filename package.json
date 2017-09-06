@@ -1,6 +1,6 @@
 {
   "name": "lesx-loader",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "lesx DSL loader",
   "main": "./index.js",
   "scripts": {
