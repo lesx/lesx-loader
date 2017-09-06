@@ -1,7 +1,6 @@
 const loaderUtils = require('loader-utils');
 const filterPath = require.resolve('./filter');
 
-
 function getRequire({
 	type,
 	filePath,
@@ -12,9 +11,18 @@ function getRequire({
 }
 
 function getRequireString(type, filePath, loaderContext, query) {
+	const {
+		uiLib = {
+			libName: 'antd',
+			libDirectory: 'lib'
+		},
+	} = query;
+
+	const loaderQuery = `libName=${uiLib.libName}&libDirectory=${uiLib.libDirectory}`;
+
 	return loaderUtils.stringifyRequest(
 		loaderContext,
-		`!!${getLoaderString(type, query)}!${filterPath}?type=${type === 'js' ? type : 'style'}!${filePath}`
+		`!!${getLoaderString(type, query)}!${filterPath}?${loaderQuery}&type=${type === 'js' ? type : 'style'}!${filePath}`
 	);
 }
 

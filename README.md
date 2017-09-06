@@ -14,6 +14,10 @@ lesx dsl webpack loader.
             js: 'babel',
             css: 'style!css',
             sass: 'style!css!sass'
+        },
+        uiLib: {
+            libName: 'antd',
+            libDirectory: 'lib'
         }
     }
 }
