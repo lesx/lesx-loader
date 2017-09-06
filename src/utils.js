@@ -14,7 +14,7 @@ function getRequire({
 function getRequireString(type, filePath, loaderContext, query) {
 	return loaderUtils.stringifyRequest(
 		loaderContext,
-		`!!${getLoaderString(type, query)}!${filterPath}?type=${type}!${filePath}`
+		`!!${getLoaderString(type, query)}!${filterPath}?type=${type === 'js' ? type : 'style'}!${filePath}`
 	);
 }
 
