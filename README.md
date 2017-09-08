@@ -86,6 +86,6 @@ into a `React Component`!
 
 ## TODO
 
-- [] style支持多语言；
-- [] SPA支持；
-- [] 公共模板(Include标签) 支持。
+- [ ] style支持多语言；  
+- [ ] SPA支持；  
+- [ ] 公共模板(Include标签) 支持。
