@@ -88,4 +88,5 @@ into a `React Component`!
 
 - [ ] style支持多语言；  
 - [ ] SPA支持；  
-- [ ] 公共模板(Include标签) 支持。
+- [ ] 公共模板(Include标签) 支持；
+- [ ] 便利性异步框架[axios](https://www.npmjs.com/package/axios)接入；
