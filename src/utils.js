@@ -27,7 +27,7 @@ function getRequireString(content, type, filePath, loaderContext, query) {
 		content,
 		libName: uiLib.libName,
 		libDirectory: uiLib.libDirectory,
-	})[style];
+	})[type];
 
 	const loaderQuery = `libName=${uiLib.libName}&libDirectory=${uiLib.libDirectory}`;
 
