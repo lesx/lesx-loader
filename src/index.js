@@ -20,16 +20,18 @@ module.exports = function(content) {
     		filePath,
 			loaderContext,
 			query,
+			content,
     	})};
 
     	module.exports = _lesx_component;
     `;
 
 	output += getRequire({
-		type: 'sass',
+		type: 'style',
 		filePath,
 		loaderContext,
 		query,
+		content,
 	});
 
 	this.callback(null, output, null);

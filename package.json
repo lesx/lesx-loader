@@ -4,7 +4,7 @@
   "description": "lesx DSL loader",
   "main": "./index.js",
   "scripts": {
-    "build": "rimraf lib && babel src --out-dir lib"
+    "build": "rimraf lib && babel src --out-dir lib --watch"
   },
   "repository": {
     "type": "git",
