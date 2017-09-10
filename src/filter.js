@@ -2,7 +2,7 @@
 
 const path = require('path');
 const loaderUtils = require('loader-utils');
-
+const getParsedRes = require('./get-parsed-res');
 
 
 module.exports = function(content) {
@@ -11,10 +11,17 @@ module.exports = function(content) {
 	const query = loaderUtils.parseQuery(this.query);
 
 	const {
-		curSubContent,
+		libName,
+		libDirectory,
+		type,
 	} = query;
 
 
+	const curRes = getParsedRes({
+		content,
+		libName,
+		libDirectory,
+	});
 
-	this.callback(null, curSubContent, null);
+	this.callback(null, curRes[type].content, null);
 };

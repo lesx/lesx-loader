@@ -24,7 +24,7 @@ module.exports = function(content) {
     	})};
 
     	module.exports = _lesx_component;
-    `;
+	`;
 
 	output += getRequire({
 		type: 'style',

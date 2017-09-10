@@ -1,8 +1,7 @@
 const loaderUtils = require('loader-utils');
 const filterPath = require.resolve('./filter');
 
-const lesxDslToJsx = require('lesx-dsl-to-jsx');
-const parsed = {};
+const getParsedRes = require('./get-parsed-res');
 
 
 function getRequire({
@@ -29,11 +28,11 @@ function getRequireString(content, type, filePath, loaderContext, query) {
 		libDirectory: uiLib.libDirectory,
 	})[type];
 
-	const loaderQuery = `libName=${uiLib.libName}&libDirectory=${uiLib.libDirectory}`;
+	const loaderQuery = `libName=${uiLib.libName}&libDirectory=${uiLib.libDirectory}&type=${type}`;
 
 	return loaderUtils.stringifyRequest(
 		loaderContext,
-		`!!${getLoaderString(curRes.lang, query)}!${filterPath}?curSubContent=${curRes.content}&type=${type}!${filePath}`
+		`!!${getLoaderString(curRes.lang, query)}!${filterPath}?${loaderQuery}!${filePath}`
 	);
 }
 
@@ -44,27 +43,6 @@ function getLoaderString(type, query) {
 
 	return query.loaders[type];
 }
-
-function getParsedRes({
-	content,
-	libName,
-	libDirectory,
-}) {
-	var res = parsed[content];
-
-	if(!res) {
-		res = lesxDslToJsx(content, {
-			libName,
-			libDirectory,
-		}); // 解析为js/style
-
-    	parsed[content] = res;
-	}
-
-	return res;
-}
-
-
 
 module.exports = {
 	getRequire,
