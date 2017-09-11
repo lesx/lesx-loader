@@ -87,6 +87,7 @@ into a `React Component`!
 ## TODO
 
 - [x] style支持多语言；  
+- [ ] template标签可以直接使用变量，而不用加`this`；  
 - [ ] SPA支持；  
 - [ ] 公共模板(Include标签) 支持；
 - [ ] 便利性异步框架[axios](https://www.npmjs.com/package/axios)接入；
