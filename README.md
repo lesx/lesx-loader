@@ -89,7 +89,7 @@ into a `React Component`!
 - [x] style支持多语言；  
 - [x] 支持: `Form.Item`子组件；  
 - [x] 支持: JSX解构`{...layout}`；  
-- [ ] template标签可以直接使用变量，而不用加`this`；  
+- [x] template标签可以直接使用变量，而不用加`this`；  
 - [ ] SPA支持；  
 - [ ] 公共模板(Include标签) 支持；
 - [ ] 便利性异步框架[axios](https://www.npmjs.com/package/axios)接入；
