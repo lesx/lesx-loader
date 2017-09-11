@@ -86,10 +86,10 @@ into a `React Component`!
 
 ## TODO
 
-- [x] style支持多语言；  
-- [x] 支持: `Form.Item`子组件；  
+- [x] style支持`sass/less/css`多语言，默认`sass`；  
+- [x] 支持: `Form.Item`子组件写法；  
 - [x] 支持: JSX解构`{...layout}`；  
-- [x] template标签可以直接使用变量，而不用加`this`；  
-- [ ] SPA支持；  
-- [ ] 公共模板(Include标签) 支持；
+- [x] template里标签的表达式里面可以直接使用变量，而不用加`this`；  
+- [ ] style支持scoped； 
+- [ ] 公共模板(Include标签) 支持；  
 - [ ] 便利性异步框架[axios](https://www.npmjs.com/package/axios)接入；
