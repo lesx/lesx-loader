@@ -90,6 +90,7 @@ into a `React Component`!
 - [x] 支持: `Form.Item`子组件写法；  
 - [x] 支持: JSX解构`{...layout}`；  
 - [x] template里标签的表达式里面可以直接使用变量，而不用加`this`；  
+- [ ] template里标签支持`tpl`公共模板；  
 - [ ] style支持scoped； 
 - [ ] 公共模板(Include标签) 支持；  
 - [ ] 便利性异步框架[axios](https://www.npmjs.com/package/axios)接入；
